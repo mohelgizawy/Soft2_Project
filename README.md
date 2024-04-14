@@ -19,7 +19,7 @@ provide the ability to students to rate the demonstrators and doctors `
         - implemetation phase 
 
     - Mohamed Hamed 
-        - requirements phase 
-        - testing phase 
+        - planning phase 
+        - analysis phase 
 
 
