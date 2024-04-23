@@ -1,34 +1,30 @@
 <?php
 require ('./connect/connect.php');
-// $ip = $_SERVER['REMOTE_ADDR'];
-// // echo $ip;
+$ip = $_SERVER['REMOTE_ADDR'];
+echo $ip;
 
-// $user_agent = $_SERVER['HTTP_SEC_CH_UA'];
-// $ischrome=str_contains($user_agent,'Google Chrome');
-// if (!$ischrome){
-//         header('location:/chrome.php');
-//     exit();
-// }
-// $parts = explode('.', $ip);
-// echo "<pre>";
-// // $last = array_pop($parts);
-// print_r($_SERVER);
-// echo "</pre>";
+$parts = explode('.', $ip);
 
-// $user_agent = $_SERVER['HTTP_SEC_CH_UA'];
-// $ischrome=str_contains($user_agent,'Google Chrome');
-// echo $ischrome;
-// if (!$ischrome){
+
+$user_agent = $_SERVER['HTTP_SEC_CH_UA'];
+print_r($user_agent);
+
+ // Check if the user agent contains 'Chrome'
+$is_chrome = strpos($user_agent, 'Chrome') !== false;
+if(!$is_chrome){
+       header('location:/chrome.php');
+       exit(); 
+} 
+
+    // the ip validation commented because the unknown ips of the access points
+
+
+// else if ($ip!='the ip'){
 //     header('location:/chrome.php');
 //     exit();
 // }
 
-// // Check if the user agent contains 'Chrome'
-// $is_chrome = strpos($user_agent, 'Chrome') !== false;
 
-// echo $is_chrome;
-
-// echo $ip;
 
 ?>
 <!DOCTYPE html>
@@ -66,7 +62,6 @@ require ('./connect/connect.php');
     // echo $sql;
     $teachers = $con->query($sql)->fetch_all();
     // print_r($teachers);
-
 
 ?>
     <div class="container">
