@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#image-loader {
+    background: #ffffff url(/image/loading.gif) no-repeat center center;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+}
+
+/* start middle */
+.box{
+    width: 75%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    height: fit-content;
+}
+.box::after {
+    top: 0;
+    right:  0;
+}
+.box::before , .box::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 0;
+    background-color: #0D126B;
+    transition: .5s;
+}
+.box::before  {
+    bottom: 0;
+    left: 0;
+}
+.box:hover::before , .box:hover::after {
+    height: 100%;
+}
+
+.box .image {
+    width: 196px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    width: 150px;
+    margin: 0 50%;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+}
+.box .image .edit-image {
+    position: absolute;
+    font-size: 16px;
+    content: "";
+    bottom: 0;
+    right: 8px;
+    color: blue;
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.box .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.box form {
+    width: 100%;
+}
+.box form .height {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.box form .height .token , 
+.box form .height .name {
+    width: calc(97% / 2);
+    display: flex;
+    flex-direction: column;
+}
+.box form .height .name {
+    margin-right: 3%;
+}
+.box form .height input , 
+.select select ,
+.pass input {
+    padding: 16px 12px;
+    border-radius: 5px;
+    border: 1px solid #00000073;
+    color:#00000073;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.box form  input:focus ,
+.select select:focus {
+    outline: none;
+}
+.select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.pass {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.pass .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.pass .text h4 {
+    color: #00000073;
+    font-size: 16px;
+}
+.pass .text span {
+    color: red;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    font-size: 22px;
+    background-color: rgb(38, 37, 37);
+    color: white;
+    transition: .4s;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 20px 8px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: #0D126B;
+}
+
+
+
+@media (max-width : 767px) {
+    .box{
+        padding: 10px;
+        width: 95%;
+        gap: 10px;
+    }
+
+    .box .image {
+        margin-bottom: 15px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .box form .height {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .box form .height .token,
+    .box form .height .name {
+        width: 100%;
+    }
+
+    .box form .height .name {
+        margin-right: 0;
+    }
+
+    .box form .height input,
+    .select select,
+    .pass input {
+        padding: 10px 6px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .select {
+        margin-bottom: 12px;
+    }
+
+    .pass {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .pass .text {
+        margin-bottom: 5px;
+    }
+
+    .pass .text h4 {
+        color: #00000073;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 8px;
+    }
+}

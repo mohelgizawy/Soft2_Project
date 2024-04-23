@@ -1,0 +1,347 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #FFF;
+    padding: 48px;
+}
+
+nav {
+    width: 98%;
+    height: 58px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid #DDD;
+    position: relative;
+}
+
+nav .me-num{
+    width: 16px;
+    height: 16px;
+    background-color: #F00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    position: absolute;
+    top: 6px;
+    left: 333px;
+    color: #FFF;
+}
+
+nav .join-num{
+    width: 16px;
+    height: 16px;
+    background-color: #F00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    position: absolute;
+    top: 6px;
+    left: 238px;
+    color: #FFF;
+}
+nav button {
+    font-family: math;
+    cursor: pointer;
+    width: 57px;
+    margin-left: 27px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #525FE1;
+    font-weight: bold;
+    height: 31px;
+}
+
+.image-name{
+    margin-top: 20px;
+    width: 28%;
+    height: 336px;
+    background-color: #fff;
+    float: left;
+}
+
+.image-name header {
+    color: #FFF;
+    width: 95%;
+    height: 49px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #525FE1;
+    margin-bottom: 19px;
+}
+
+.image-name .content-div{
+    width: 100%;
+    height: 84%;
+    text-align: center;
+    color: #767474;
+    background-color: #F5F5F5;
+}
+
+.image-name .content-div img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.image-name .content-div form input{
+    margin-top: 26px;
+    width: 105px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background-color: #525FE1;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.content{
+    float: right;
+    width: 60%;
+    height: 520px;
+    margin-top: 20px;
+    background-color: #F5F5F5;
+    margin-right: 43px;
+    padding: 40px;
+}
+
+.content form label{
+    font-family: fangsong;
+    color: #b2adad;
+    margin-bottom: 3px;
+    display: block;
+}
+
+
+.content form .type {
+    display: block;
+    width: 800px;
+    height: 36px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+}
+
+.content form .photo_div{
+    text-align: center;
+    display: flex;
+    width: 96%;
+    height: 127px;
+    border: 1px solid #ddd6d6;
+    justify-content: center;
+    align-items: center;
+}
+
+.content form .Save{
+    margin-top: 80px;
+    width: 105px;
+    height: 34px;
+    border: none;
+    outline: none;
+    background-color: #525FE1;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+}
+
+.rank{
+    float: right;
+    width: 60%;
+    height: 520px;
+    margin-top: 20px;
+    background-color: #F5F5F5;
+    margin-right: 43px;
+    padding: 40px;
+    overflow: auto;
+}
+
+
+
+.rank div, .joins div,.message div{
+    width: 96%;
+    height: 57px;
+    /*background-color: #d8d8d8;*/
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #DDD;
+}
+
+.rank div{
+    height: 60px;
+    margin-bottom: 7px;
+
+}
+
+.rank div span, .joins div span,.message div span{
+    width: 121px;
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rank div span img, .joins div span img,.message div span img{
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+}
+
+
+.joins{
+    float: right;
+    width: 60%;
+    height: 520px;
+    margin-top: 20px;
+    background-color: #FFF;
+    margin-right: 43px;
+    padding: 40px;
+    overflow: auto;
+}
+.joins h3{
+    color: #ccc4c4;
+    font-family: monospace;
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.joins div span{
+    width: 106px;
+    word-wrap: break-word
+}
+
+.joins div  .acc{
+    width: 88px;
+    height: 29px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-right: 2px;
+}
+
+.joins div  .del{
+    width: 52px;
+    height: 29px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+
+/* pop up image */
+
+.show{
+    z-index: 999;
+    display: none;
+}
+.overlay{
+    width: 97%;
+    height: 100%;
+    background: rgba(0,0,0,.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+ .img-show{
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    display: none;
+}
+.img-show span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.img-show img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.message{
+    float: right;
+    width: 60%;
+    height: 520px;
+    margin-top: 20px;
+    background-color: #FFF;
+    margin-right: 43px;
+    padding: 40px;
+    overflow: auto;
+}
+.message h3{
+    color: #ccc4c4;
+    font-family: monospace;
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.message div span{
+    width: 106px;
+    word-wrap: break-word
+}
+
+.message div  .acc{
+    width: 88px;
+    height: 29px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-right: 2px;
+}
+
+.message div  .del{
+    width: 52px;
+    height: 29px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.message div a{
+    width: 90px;
+    height: 30px;
+    /* background-color: #10ff32; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #DDD;
+    color: #bbb7b7;
+}
+
+.message div a img{
+    width: 30px;
+    margin-right: 5px;
+}
