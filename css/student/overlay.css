@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    position: relative;
+}
+
+/* the over lay comment  card  */
+.overlay-comment {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #4a4a4a47;;
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-comment {
+    padding: 30px;
+    background-color: white;
+    color: #000000;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    width: 40vw;
+    min-width: 320px;
+    max-width: 500px;    
+    width: 60vw;
+    min-height: 320px;
+    max-height: 500px;
+    aspect-ratio: 1;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+}
+.box-comment hr {
+    margin: 10px 0;
+}
+.box-comment .text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.box-comment .text .title h3{
+    font-size: 20px;
+}
+.box-comment .text .title p{
+    color: #72757C;
+    width: 80%;
+}
+.box-comment .text .icon-rate {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    justify-content: center;
+    color: #777;
+    cursor: pointer;
+
+}
+
+.box-comment .rate-star .star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.box-comment .rate-star .star i  {
+    font-size: 50px;
+    color: rgb(250, 237, 54);
+    cursor: pointer;
+}
+
+.box-comment form .texterea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.box-comment form .texterea label {
+    font-size: 19px;
+    margin-bottom: 6px;
+    color: #000000D9;
+
+}
+.box-comment form .texterea textarea {
+    outline: none;
+    border: 1px solid #00000073;
+    padding: 16px 12px;
+    border-radius: 12px;
+    color: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF);    display: flex;
+    align-items: center;
+    font-size: 18px ;
+    font-weight: 400;
+}
+.box-comment form .btn-rete-comment {
+    width: 100%;
+    padding: 15px ;
+    border-radius: 15px;
+    outline: none;
+    color: white;
+    background: #7D26CE;
+    box-shadow: 2px 0px 13px 0px #00000026;
+    box-shadow: 4px 4px 13px 0px #FFFFFF40 inset;
+    border: none;
+    font-size: 22px ;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    .title p{
+        display: none;
+    }
+    .box-comment{
+        gap: 0px;
+    }
+    .box-comment .text{
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-comment .rate-star .star i  {
+        font-size: 40px;
+    }
+    .box-comment form .texterea {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .box-comment form .texterea label {
+        font-size: 19px;
+    }
+    .box-comment form .texterea textarea::placeholder,
+    .box-comment form .texterea textarea{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 6px;
+        font-size: 16px;
+    }
+    .box-comment form .btn-rete-comment {
+        padding: 10px ;
+    }
+}
