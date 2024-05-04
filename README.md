@@ -19,7 +19,6 @@ provide the ability to students to rate the demonstrators and doctors `
         - implemetation phase 
 
     - Mohamed Hamed 
-        - planning phase 
         - analysis phase 
 
 
