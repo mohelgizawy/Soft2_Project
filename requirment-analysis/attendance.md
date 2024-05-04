@@ -8,7 +8,10 @@
 2. The system needs to be able to connect you to QR builder 
 ![QR](session.webp)
 3. The system needs to be connected to the internet all the time 
-4. Putting alot of constraints on the user to take the attendance properly 
+4. Putting alot of constraints on the user to take the attendance properly :
+   - limiting the apility to sign in or out of the system 
+   - making a central connection point 
+   - comparing the IP of the students with the central connection point  
 #### Constraints :
 - One of the main constraints is the internet in many ways :
   - the strength of the network 
